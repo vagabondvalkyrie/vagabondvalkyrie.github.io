@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+
+    <title>Uimariksi</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Saara">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <link href="tyyli.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="logo7.png" alt="" class="kuva" id="logokuva"></a>
+
+        <nav id="topnav">
+
+
+            <a href="index.html">Etusivu</a>
+            <a href="tekniikat.html">Uintitekniikat</a>
+            <a href="hallit.html">Uimahallit</a>
+            <a href="vinkit.html">Vinkkejä aloittelijoille</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="justified-text">
+            <div class="box">
+                <div class="flex_container">
+                    <div class="flex_item">
+                        <h1>Pääkaupunkiseudun uimahallit</h1>
+                        <p>Tältä sivulta löydät Helsingin, Espoon ja Vantaan uimahallien osoitteet, aukioloajat ja
+                            hinnat
+                            (kertamaksut).
+                            Muut
+                            tiedot voit tarkistaa hallien omilta sivuilta, hyperlinkki hallien
+                            nimissä.<br>Alennusryhmään kuuluu opiskelijat, tytöttömät ja eläkeläiset. Kaikissa halleissa
+                            0-6v uivat
+                            ilmaiseksi. <br><b>HUOM!</b>
+                            Yrjönkadun
+                            uimahalli on
+                            suljettu
+                            tammikuusta 2024 noin kahden vuoden ajan. Martinlaakson uimahalli ja Hakunilan uimahalli on
+                            suljettu kevään
+                            2024. </p>
+
+
+                        <figure> <img src="itakeskus.jpg" alt="Pitkiä uimaratoja ja liukumäki" class="kuva">
+                            <figcaption>Itäkeskuksen uimahalli</figcaption>
+                        </figure>
+
+                        <div style="overflow-x:auto;">
+                            <input type="text" id="hallinimi" onkeyup="naytaHallit()"
+                                placeholder="Etsi halleja nimen perusteella..." title="Kirjoita hallin nimi">
+                            <table id="taulukko">
+                                <tr class="header">
+                                    <th style="width:60%;">Nimi</th>
+                                    <th style="width:40%;">Osoite</th>
+                                    <th style="width:40%;">Aukioloajat</th>
+                                    <th style="width:40%;">Hinnat</th>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.urheiluhallit.fi/hallit/makelanrinne/">
+                                            Mäkelänrinteen uintikeskus
+                                        </a></td>
+                                    <td>Mäkelänkatu 49, 00550 Helsinki</td>
+                                    <td>ma–pe 6.15–22.00, la–su 8.00–21.00</td>
+                                    <td>7-16v 3,50€, aikuiset 7€, alennusryhmä 3,50€</td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="https://liikunta.hel.fi/fi/paikat/tprek:40774">Pirkkolan uimahalli</a>
+                                    </td>
+                                    <td>Pirkkolan Metsätie 6, 00630 Helsinki</td>
+                                    <td>ma, ke-pe 7.00- 20.00, ti 7.00-17.00, la-su 9.00-16.30</td>
+                                    <td>7-17v 3,20€, aikuiset 5,80€, alennusryhmä 3,20€</td>
+
+                                </tr>
+                                <tr>
+                                    <td> <a href="https://www.urheiluhallit.fi/hallit/toolo/">Töölön uimahalli</a></td>
+                                    <td>Topeliuksenkatu 41a, 00250 Helsinki</td>
+                                    <td>ma–pe 6.15–22.00, la 7.00–21.00, su 8.00–21.00</td>
+                                    <td>7-16v 3,20€, aikuiset 5,80€, alennusryhmät 3,20€</td>
+                                </tr>
+                                <tr>
+                                    <td> <a href="https://www.urheiluhallit.fi/hallit/kallio/">Kallion uimahalli</a>
+                                    </td>
+                                    <td>Helsinginkatu 25, 00510 Helsinki</td>
+                                    <td>ma–ti 6.15–21.00, ke–pe 6.15–9.00, 9.00–14.00 koululaisuinnit (uimahalli
+                                        suljettu),
+                                        14.00–21.00,
+                                        la–su
+                                        8.00–21.00</td>
+                                    <td>7-16v 3,20€, aikuiset 5,80€, alennusryhmät 3,20€</td>
+
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.urheiluhallit.fi/hallit/vuosaari/">Vuosaaren uimahalli</a>
+                                    </td>
+                                    <td>Vuosaarentie 5 / Tyynylaavantie 9 B, 00980 Helsinki</td>
+                                    <td>ma–pe 6.15–21.00, la–su 8.00–21.00</td>
+                                    <td>7-16v, 3.50€, aikuiset 6,30€, alennusryhmät 3,50€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://liikunta.hel.fi/fi/paikat/tprek:41835">Itäkeskuksen
+                                            uimahalli</a>
+                                    </td>
+                                    <td>Olavinlinnantie 6, 00900 Helsinki</td>
+                                    <td>ma - ke, pe 6.15-20.30, to 11.00-20.30, la-su 8.00-20.30</td>
+                                    <td>7-17v 3,20€, aikuiset 5,80€, alennusryhmä 3,20€</td>
+
+                                </tr>
+                                <tr>
+                                    <td><a href="https://syk.fi/palvelut/uimahalli/">Haagan uimahalli</a></td>
+                                    <td>Isonnevantie 8, 00320 Helsinki</td>
+                                    <td>Aukioloajat: ke-pe 16.00-21.00, la 9.00-16.00</td>
+                                    <td>7–16 v 3,20€, aikuiset 5,85€, alennusryhmä 3,20€</td>
+
+                                </tr>
+                                <tr>
+                                    <td><a href="https://liikunta.hel.fi/fi/paikat/tprek:41536">Jakomäen uimahalli</a>
+                                    </td>
+                                    <td>Somerikkopolku 6, Helsinki</td>
+                                    <td>ma 6.15-7.00 (16.00-19.30 10 kerran- ,kk- ja kausikorttilaisille, uimaan VAIN
+                                        uimaseurat), ti
+                                        6.15-7.00
+                                        (14.00-18.00 naistenvuoro, varauksella Eventillan kautta), ke 14.00-19.30, to
+                                        6.15-7.00
+                                    </td>
+                                    <td>7–16 v 3,20€, aikuiset 5,80€, alennusryhmä 3,20€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.urheiluhallit.fi/hallit/kontula/">Kontulan uimahalli</a>
+                                    </td>
+                                    <td>Ostostie 4, 00940 Helsinki</td>
+                                    <td>ma–pe 6.15–21.00, la–su 7.00–21.00</td>
+                                    <td>7–16 v 3,20€, aikuiset 5,80€, alennusryhmä 3,20€</td>
+
+                                </tr>
+                                <tr>
+                                    <td><a href="https://lauttasaarenyhteiskoulu.fi/uimahalli/">Lauttasaaren
+                                            uimahalli</a>
+                                    </td>
+                                    <td>Isokaari 19, 00200 Helsinki</td>
+                                    <td>ti-pe 16.30-21.00, la 7.30-16.30</td>
+                                    <td>7-17v 4€, aikuiset 6,50€, alennusryhmät 4€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.urheiluhallit.fi/hallit/malmi/">Malmin uimahalli</a></td>
+                                    <td>Pekanraitti 14, 00700 Helsinki</td>
+                                    <td>ma–pe 6.15–22.00, la–su 7.00–21.00</td>
+                                    <td>7-16v 3,20€, aikuiset 5,80€, alennusryhmät 3,20€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.urheiluhallit.fi/hallit/siltamaki/">Siltamäen uimahalli</a>
+                                    </td>
+                                    <td>Jousimiehentie 3, 00740 Helsinki</td>
+                                    <td>ma, ke 13.00–21.00, ti 6.30–11.00, 13.00–21.00, to, pe 6.30–11.00, 12.30–21.00,
+                                        la
+                                        12.00–19.00, su
+                                        13.00–21.00</td>
+                                    <td>7-16v 3,20€, aikuiset 5,80€, alennusryhmät 3,20€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.espoo.fi/fi/toimipisteet/39735">Espoonlahden uimahalli</a>
+                                    </td>
+                                    <td>Espoonlahdenkuja 4, 02320 Espoo</td>
+                                    <td>ma-ti 7.00-20.00, ke 6.00-20.00, to 10.00-20.00, pe 6.00-20.00, la 9.00-17.00,
+                                        su
+                                        11.00-17.00</td>
+                                    <td>7-17v 3,50€, aikuiset 6€, alennusryhmä 3,50€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.espoo.fi/fi/toimipisteet/39363">Keski-Espoon uimahalli</a>
+                                    </td>
+                                    <td>Kaivomestarinniitty 2, 02770 Espoo</td>
+                                    <td>ma-ti 7.00-20.00, ke, pe 6.00-20.00, to 11.00-20.00, la 9.00-17.00, su
+                                        11.00-17.00
+                                    </td>
+                                    <td>7-17v 3,50€, aikuiset 6€, alennusryhmä 3,50€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.espoo.fi/fi/toimipisteet/39817">Leppävaaran uimahalli</a>
+                                    </td>
+                                    <td>Veräjäpellonkatu 15, 02650 Espoo</td>
+                                    <td>ma 7.00-20.00, ti 6.00-20.00, ke 10.00-20.00, to 6.00-20.00, pe 7.00-20.00,
+                                        la-su
+                                        9.00-19.00</td>
+                                    <td>7-17v 3,50€, aikuiset 6€, alennusryhmä 3,50€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.espoo.fi/fi/toimipisteet/68426">Matinkylän uimahalli</a>
+                                    </td>
+                                    <td>Tynnyritie 6, 02230 Espoo</td>
+                                    <td>ma 6.00-20.00, ti 10.00-20.00, ke 6.00-20.00, to 7.00-20.00, pe 7.00-20.00,
+                                        la-su
+                                        8.00-20.00</td>
+                                    <td>7-17v 3,50€, aikuiset 6€, alennusryhmä 3,50€</td>
+
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.espoo.fi/fi/toimipisteet/39753">Olarin uimahalli</a></td>
+                                    <td>läportti 4 A-B, 02210 Espoo</td>
+                                    <td>ma 9.00-17.00, ti 10.00-18.00, ke 9.00-17.00, to 12.00-20.00, pe 13.30-21.00
+                                    </td>
+                                    <td>7-17v 3,50€, aikuiset 6€, alennusryhmä 3,50€</td>
+                                </tr>
+                                <tr>
+                                    <td><a
+                                            href="https://www.vantaa.fi/fi/palveluhakemisto/toimipiste/tikkurilan-uimahalli">Tikkurilan
+                                            uimahalli</a></td>
+                                    <td>Läntinen Valkoisenlähteentie 50, 01300 Vantaa</td>
+                                    <td>ma-ke, pe 6.00-20.00, to 10.00-20.00, la-su 10.00-17.00</td>
+                                    <td>7-17v 2,73€ aikuiset 5,45€, alennusryhmät 2,73€</td>
+                                </tr>
+                                <tr>
+                                    <td><a
+                                            href="https://www.vantaa.fi/fi/palveluhakemisto/toimipiste/myyrmaen-uimahalli">Myyrmäen
+                                            uimahalli</a>
+                                    </td>
+                                    <td>Myyrmäenraitti 4, 01600 Vantaa</td>
+                                    <td>ma, ke-pe 6.00-20.00, ti 10.00-20.00, la-su 10.00-17.00</td>
+                                    <td>7-17v 2,73€ aikuiset 5,45€, alennusryhmät 2,73€</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.vantaa.fi/fi/palveluhakemisto/toimipiste/korson-uimahalli">Korson
+                                            uimahalli</a>
+                                    </td>
+                                    <td>Kisatie 29, 01450 Vantaa</td>
+                                    <td>ma-pe 16.00-20.00</td>
+                                    <td>7-17v 2,73€ aikuiset 5,45€, alennusryhmät 2,73€</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <script>
+                            function naytaHallit() {
+                                var input, filter, table, tr, td, i, txtValue;
+                                input = document.getElementById("hallinimi");
+                                filter = input.value.toUpperCase();
+                                table = document.getElementById("taulukko");
+                                tr = table.getElementsByTagName("tr");
+                                for (i = 0; i < tr.length; i++) {
+                                    td = tr[i].getElementsByTagName("td")[0];
+                                    if (td) {
+                                        txtValue = td.textContent || td.innerText;
+                                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                            tr[i].style.display = "";
+                                        } else {
+                                            tr[i].style.display = "none";
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>Heräsikö mielenkiinto tai jäikö kysyttävää? Ole yhteydessä: <br>
+            Saara Ahokas <br>
+            bhm576@myy.haaga-helia.fi</p>
+    </footer>
+
+
+</body>
+
+</html>

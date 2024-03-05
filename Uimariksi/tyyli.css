@@ -1,0 +1,210 @@
+/*yhteiset*/
+
+header,
+footer {
+    text-align: center;
+}
+
+
+/*navigointi*/
+
+
+nav {
+    flex: 1 0 auto;
+    font-family: "Fjalla One", sans-serif;
+    /*  background-color: #cdf2f4;  */
+    margin: 30 auto;
+    padding: 5px;
+    border-radius: 40px;
+    background-color: #cdf2f4;
+
+}
+
+nav a {
+    padding: 5px;
+    display: inline-block;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    --mask:
+        radial-gradient(96.74px at 50% 131.1px, #000 99%, #0000 101%) calc(50% - 92px) 0/184px 51% repeat-x,
+        radial-gradient(96.74px at 50% -85.1px, #0000 99%, #000 101%) 50% 46px/184px calc(51% - 46px) repeat-x,
+        radial-gradient(96.74px at 50% calc(100% - 131.1px), #000 99%, #0000 101%) calc(50% - 92px) 100%/184px 51% repeat-x,
+        radial-gradient(96.74px at 50% calc(100% + 85.1px), #0000 99%, #000 101%) 50% calc(100% - 46px)/184px calc(51% - 46px) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    width: auto;
+    /* Adjust width as needed */
+    height: auto;
+    /* Adjust height as needed */
+    background-color: #cdf2f4;
+    /* Adjust background color as needed */
+    margin: none;
+    /* Adjust margin as needed */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*index-sivu*/
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    word-spacing: 2px;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+body {
+    background-color: #9ed3ff;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    text-align: center;
+    font-size: 110%;
+    display: inline-block;
+
+}
+
+img.kuva {
+    display: inline-block;
+    margin: 25px 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-radius: 5%;
+    max-width: 400px;
+}
+
+
+figure {
+    margin: 1px;
+
+    /* adjust as needed */
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+/*tekniikat-sivu*/
+/*hallit-sivun hakukone*/
+
+#hallinimi {
+    background-image: url('suurennuslasi1.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 90%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #000000;
+    margin-bottom: 12px;
+    border-radius: 40px;
+}
+
+#taulukko {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000000;
+    font-size: 18px;
+    border-spacing: 0;
+
+}
+
+#taulukko th,
+#taulukko td {
+    text-align: left;
+    padding: 15px;
+}
+
+#taulukko tr.header,
+#taulukko tr:hover {
+    background-color: #f1f1f1;
+    width: auto;
+}
+
+/*vinkit*/
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ul li {
+    margin-left: 1em;
+}
+
+/*linkit*/
+
+a:link {
+    text-decoration: underline;
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+
+/* class=flex_container .flex_container (display:flex;
+    flex-direction: row)) .flex_item (flex) */
+
+/* mobiili*/
+
+@media only screen and (max-width:430px) {
+
+    #topnav li {
+        display: block;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #topnav a {
+        font-size: 1.1rem;
+
+    }
+
+}
+
+/* keskikokoiset */
+
+@media only screen and (min-width:431px) {
+
+    .flex_container {
+        display: flex
+    }
+
+    .flex_item {
+        flex: 1
+    }
+
+}

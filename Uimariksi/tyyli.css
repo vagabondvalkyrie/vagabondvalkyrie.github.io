@@ -8,12 +8,9 @@ footer {
 
 /*navigointi*/
 
-
 nav {
     flex: 1 0 auto;
     font-family: "Fjalla One", sans-serif;
-    /*  background-color: #cdf2f4;  */
-    margin: 30 auto;
     padding: 5px;
     border-radius: 40px;
     background-color: #cdf2f4;
@@ -25,11 +22,14 @@ nav a {
     display: inline-block;
 }
 
-html,
+/* vartalo*/
+
 body {
     margin: 0;
     padding: 0;
+
 }
+
 
 .box {
     --mask:
@@ -45,7 +45,7 @@ body {
     /* Adjust height as needed */
     background-color: #cdf2f4;
     /* Adjust background color as needed */
-    margin: none;
+    margin: 0px;
     /* Adjust margin as needed */
     padding-top: 60px;
     padding-bottom: 60px;
@@ -53,7 +53,7 @@ body {
     padding-right: 15px;
 }
 
-/*index-sivu*/
+
 h1 {
     text-align: center;
 }
@@ -82,29 +82,23 @@ body {
 
 }
 
+/*kuvat*/
+
 img.kuva {
-    display: inline-block;
     margin: 25px 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     border-radius: 5%;
-    max-width: 400px;
-}
-
-
-figure {
-    margin: 1px;
-
-    /* adjust as needed */
+    max-width: 500px;
 }
 
 figure figcaption {
     text-align: center;
+    padding-bottom: 5px;
 }
 
-/*tekniikat-sivu*/
 /*hallit-sivun hakukone*/
 
 #hallinimi {
@@ -140,7 +134,7 @@ figure figcaption {
     width: auto;
 }
 
-/*vinkit*/
+/*vinkit-sivu*/
 
 ul {
     margin-left: 0;
@@ -171,21 +165,26 @@ a:active {
 }
 
 
-/* class=flex_container .flex_container (display:flex;
-    flex-direction: row)) .flex_item (flex) */
-
 /* mobiili*/
 
 @media only screen and (max-width:430px) {
+
+    h1 {
+        display: none;
+    }
 
     #topnav li {
         display: block;
         text-align: center;
     }
 
+    body {
+        display: block;
+    }
+
     header {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     #topnav a {
@@ -193,11 +192,54 @@ a:active {
 
     }
 
+    /* 
+         header {
+             flex-direction: column;
+             align-items: flex-start;
+         }
+    
+         nav {
+             margin-top: 10px;
+         }
+    
+         nav a {
+             margin-right: 0;
+             margin-bottom: 10px;
+             display: block;
+         }
+         */
+
+    /* piilota ylärivi */
+    #taulukko th {
+        display: none;
+    }
+
+    /* solut blokkeina luettavuutta varten */
+    #taulukko tbody,
+    #taulukko tr,
+    #taulukko td {
+        display: block;
+    }
+
+    #taulukko td {
+        width: auto;
+    }
+
+    #taulukko td {
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    /* värien vaihtelu luettavuutta varten */
+    #taulukko tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 }
+
 
 /* keskikokoiset */
 
-@media only screen and (min-width:431px) {
+@media only screen and (max-width:600px) {
 
     .flex_container {
         display: flex
@@ -207,4 +249,44 @@ a:active {
         flex: 1
     }
 
+    body {
+        display: inline-block;
+    }
+
+    /* solut blokkeina luettavuutta varten */
+    #taulukko tbody,
+    #taulukko tr,
+    #taulukko td {
+        display: block;
+    }
+
+    #taulukko td {
+        width: auto;
+    }
+
+    #taulukko td {
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    /* värien vaihtelu luettavuutta varten */
+    #taulukko tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}
+
+/* suure näytöt*/
+
+@media only screen and (max-width:1024px) {
+    .flex_container {
+        display: flex
+    }
+
+    .flex_item {
+        flex: 1
+    }
+
+    body {
+        display: inline-block;
+    }
 }

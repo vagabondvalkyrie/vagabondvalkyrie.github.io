@@ -24,11 +24,9 @@
 
     <header>
         <a href="index.html">
-            <img src="logo7.png" alt="" class="kuva" id="logokuva"></a>
+            <img src="logo7.png" alt="Ihmishahmon ääriviivat uimassa aallokossa" class="kuva" id="logokuva"></a>
 
-        <nav id="topnav">
-
-
+        <nav>
             <a href="index.html">Etusivu</a>
             <a href="tekniikat.html">Uintitekniikat</a>
             <a href="hallit.html">Uimahallit</a>
@@ -47,20 +45,19 @@
                         <p>Tältä sivulta löydät Helsingin, Espoon ja Vantaan uimahallien osoitteet, aukioloajat ja
                             hinnat
                             (kertamaksut).
-                            Muut
-                            tiedot voit tarkistaa hallien omilta sivuilta, hyperlinkki hallien
-                            nimissä.<br>Alennusryhmään kuuluu opiskelijat, tytöttömät ja eläkeläiset. Kaikissa halleissa
+                            Lisää tietoa löydät hallien omilta sivuilta, joille pääset nimessä olevalla linkillä.
+                            <br>Alennusryhmään kuuluu opiskelijat, tytöttömät ja eläkeläiset. Kaikissa halleissa
                             0-6v uivat
                             ilmaiseksi. <br><b>HUOM!</b>
                             Yrjönkadun
                             uimahalli on
                             suljettu
-                            tammikuusta 2024 noin kahden vuoden ajan. Martinlaakson uimahalli ja Hakunilan uimahalli on
-                            suljettu kevään
-                            2024. </p>
+                            tammikuusta 2024 noin kahden vuoden ajan. Martinlaakson ja Hakunilan uimahallit ovat
+                            suljettu kevään 2024 ajan.
+                        </p>
 
-
-                        <figure> <img src="itakeskus.jpg" alt="Pitkiä uimaratoja ja liukumäki" class="kuva">
+                        <figure> <img src="itakeskus.jpg" alt="Pitkiä uimaratoja ja liukumäki Itäkeskuksen uimahallissa"
+                                class="kuva">
                             <figcaption>Itäkeskuksen uimahalli</figcaption>
                         </figure>
 
@@ -247,26 +244,6 @@
                             </table>
                         </div>
 
-                        <script>
-                            function naytaHallit() {
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementById("hallinimi");
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("taulukko");
-                                tr = table.getElementsByTagName("tr");
-                                for (i = 0; i < tr.length; i++) {
-                                    td = tr[i].getElementsByTagName("td")[0];
-                                    if (td) {
-                                        txtValue = td.textContent || td.innerText;
-                                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                            tr[i].style.display = "";
-                                        } else {
-                                            tr[i].style.display = "none";
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
 
 
 
@@ -283,6 +260,27 @@
             Saara Ahokas <br>
             bhm576@myy.haaga-helia.fi</p>
     </footer>
+
+    <script>
+        function naytaHallit() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("hallinimi");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("taulukko");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 
 
 </body>

@@ -40,13 +40,12 @@ body {
     -webkit-mask: var(--mask);
     mask: var(--mask);
     width: auto;
-    /* Adjust width as needed */
+    /* muuta leveyttä tarvittaessa*/
     height: auto;
-    /* Adjust height as needed */
+    /* muuta korkeutta tarvittaessa*/
     background-color: #cdf2f4;
-    /* Adjust background color as needed */
     margin: 0px;
-    /* Adjust margin as needed */
+    /* muuta marginia tarvittaessa*/
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 15px;

@@ -169,6 +169,11 @@ a:active {
 
 @media only screen and (max-width:430px) {
 
+    img.kuva {
+        width: 200px;
+        height: auto;
+    }
+
     h1 {
         display: none;
     }
@@ -191,23 +196,6 @@ a:active {
         font-size: 1.1rem;
 
     }
-
-    /* 
-         header {
-             flex-direction: column;
-             align-items: flex-start;
-         }
-    
-         nav {
-             margin-top: 10px;
-         }
-    
-         nav a {
-             margin-right: 0;
-             margin-bottom: 10px;
-             display: block;
-         }
-         */
 
     /* piilota ylärivi */
     #taulukko th {
@@ -240,6 +228,11 @@ a:active {
 /* keskikokoiset */
 
 @media only screen and (max-width:600px) {
+
+    img.kuva {
+        max-width: 450px;
+        height: auto;
+    }
 
     .flex_container {
         display: flex
